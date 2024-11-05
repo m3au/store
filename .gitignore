@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+temp/*
+!temp/.gitkeep
+
+# Editor files
+.vscode/
+.idea/
+*.swp
