@@ -1,0 +1,7 @@
+[core]
+    autocrlf = false
+    safecrlf = true
+    ignorecase = false
+
+[lfs]
+    enabled = false
