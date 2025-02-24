@@ -1,0 +1,161 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{helvet}
+\usepackage{lmodern}  % Latin Modern fonts - clean and professional
+
+% Colors
+\definecolor{primary}{RGB}{70,70,70}
+\definecolor{accent}{RGB}{0,112,192}
+
+% Page margins
+\geometry{
+    a4paper,
+    top=1.5cm,
+    bottom=1.5cm,
+    left=2cm,
+    right=2cm
+}
+
+% Font setup
+\renewcommand{\familydefault}{\sfdefault}  % Use sans-serif as default
+\renewcommand{\seriesdefault}{\mddefault}  % Medium weight for better readability
+
+% Custom section style
+\makeatletter
+\renewcommand\section{\@startsection{section}{1}{\z@}%
+    {-3.5ex \@plus -1ex \@minus -.2ex}%
+    {3ex \@plus.2ex}%  % Increased space after section
+    {\Large\sffamily\bfseries\color{primary}}}
+\makeatother
+
+% Title font sizes
+\newcommand{\headername}{\Huge\sffamily\bfseries}
+\newcommand{\headerrole}{\Large\sffamily\color{primary}}
+\newcommand{\headerdetails}{\normalsize\sffamily}
+
+% Remove section numbering
+\setcounter{secnumdepth}{0}
+
+% Custom bullet points
+\setlist[itemize]{leftmargin=2em,label=\textbullet,nosep,topsep=0pt,partopsep=0pt}
+
+% Custom commands
+\newcommand{\entry}[4]{%
+    \noindent{\sffamily\bfseries#1}\hfill\mbox{\sffamily#2\hspace{2em}#3}%  % Increased space between company and date
+    \par\vspace{0.5em}%  % Increased space after title
+    {\sffamily#4}%
+    \par\vspace{1.5em}%  % Increased space between entries
+}
+
+% Adjust tabularx spacing
+\renewcommand{\arraystretch}{1.2}  % Increase row spacing in tables
+
+% Document start
+\begin{document}
+
+\begin{center}
+{\headername Bruno Palma}\\[0.3em]
+{\headerrole Senior Test Automation Engineer}\\[0.3em]
+{\headerdetails \faEnvelope\ brunovop@pm.me \quad \faPhone\ +4916095279435 \quad \faMapMarker\ Greater Munich Area, Germany}
+\end{center}
+
+\section{Professional Profile}
+Senior QA Engineer \& Test Automation Architect with over 13 years in IT, specializing in modern JavaScript testing frameworks (Playwright, Cypress) with TypeScript. Proven track record of building and scaling QA teams, transforming manual testing processes into robust automation frameworks. Previously founded and grew a tech company to 20+ employees, delivering solutions for enterprise clients including HSBC and Telefónica. Currently focused on test automation leadership and quality engineering strategy.
+
+\section{Professional Experience}
+\entry{Senior Test Automation Engineer}{XEMPUS}{May 2023 - Mar 2024}{%
+\begin{itemize}
+    \item Established cross-team QA department reporting to VP of Engineering, implementing standardized testing methodologies across 5 product teams
+    \item Scaled test automation coverage from 30\% to 80\% with 150+ structured tests running nightly on multiple parallel browsers
+    \item Mentored distributed QA engineers in test automation best practices using TypeScript, Playwright, and CI/CD, reducing average bug detection time to overnight
+\end{itemize}}
+
+\entry{Test Automation Engineer}{XEMPUS}{Apr 2022 - Apr 2023}{%
+\begin{itemize}
+    \item Architected enterprise-wide test automation framework using Playwright, reducing test execution time by more than 60\% compared to Selenium BrowserStack
+    \item Established modern testing architecture in TypeScript, with Page Object Models, Data Driven Testing, and Behavior-Driven Development
+    \item Reduced infrastructure costs by implementing Quality Gates in Jenkins CI/CD and enabling vertical and horizontal scaling of test-workers
+\end{itemize}}
+
+\entry{Senior Frontend Web Developer}{Zeppelin Group}{May 2020 - Jan 2022}{%
+\begin{itemize}
+    \item Led frontend development for multiple international platforms including OXID e-commerce and global .com website based on Adobe AEM CMS
+    \item Modernized development workflow by implementing Git hooks, linting configurations, and standardized VS Code settings
+    \item Enhanced global components achieving 90+ Lighthouse scores across Performance, Accessibility, SEO, and Best Practices
+\end{itemize}}
+
+\entry{Senior UI/UX Consultant}{Retarus}{Jul 2018 - Jun 2019}{%
+\begin{itemize}
+    \item Conceptualized and designed enterprise applications used by 35K+ users, creating information architecture for global email security products
+    \item Created product concepts and high-fidelity mockups for new features, leading presentations and design workshops
+    \item Developed reusable Angular components while mentoring team on accessibility standards
+\end{itemize}}
+
+\entry{Frontend Developer}{Retarus}{Jun 2018 - Jun 2019}{%
+\begin{itemize}
+    \item Built responsive SPAs using AngularJS/Angular and Redux for 3 core enterprise products
+    \item Developed custom component library integrating Bootstrap and Material UI
+    \item Modernized development workflow by implementing ESLint, TSLint, and Prettier
+\end{itemize}}
+
+\entry{Founder \& CTO}{Younion IT}{Jul 2013 - Jun 2017}{%
+\begin{itemize}
+    \item Founded and scaled technology consultancy to 20+ employees and \$300K+ annual revenue
+    \item Led delivery of enterprise solutions for Fortune 500 clients in banking and telecommunications
+    \item Implemented full regression test automation suite using UFT and ALM/QC
+\end{itemize}}
+
+\entry{End User Computing Analyst \& Developer}{BRQ IT Services}{Jul 2011 - Jun 2013}{%
+\begin{itemize}
+    \item Built and led 20-person End User Computing team supporting hundreds of users across HSBC's Finance and Accounting operations
+    \item Pioneered embedded EUC model that reduced solution delivery time and cost, integrating developers directly with business units
+    \item Automated 30+ critical business processes using BPMN 2.0, VBA and ACL, saving 2000+ manual hours monthly
+\end{itemize}}
+
+\entry{Internal Auditor}{GVT}{Jun 2010 - Jun 2011}{%
+\begin{itemize}
+    \item Automated monthly audit reporting using ACL and ETL processes, enabling cross-checking of data and reducing audit cycle time
+\end{itemize}}
+
+\entry{Software Specialist}{Tech Supply}{Jun 2008 - May 2010}{%
+\begin{itemize}
+    \item Led ACL field projects and training for 20+ major organizations, including government agencies and Fortune 500 companies
+    \item Developed and delivered SOX compliance solutions resulting in successful audits and continuous monitoring
+\end{itemize}}
+
+\section{Education}
+\entry{Social Communication}{FAE Centro Universitario}{2009 - 2013}{%
+\begin{itemize}
+    \item Master's in Advertising and Marketing (completed 3.5 of 5 years)
+\end{itemize}}
+
+\entry{ISTQB Certified Tester}{Foundation Level}{Sep 2024}{%
+\begin{itemize}
+    \item International Software Testing Qualifications Board certification
+\end{itemize}}
+
+\entry{Digital Marketing}{Google}{2023}{%
+\begin{itemize}
+    \item Google Digital Marketing Fundamentals certification
+\end{itemize}}
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+Test Automation & Playwright (Expert), Test Architecture, E2E Testing, BDD, API Testing, Performance Testing, CI/CD Quality Gates\\[0.8em]
+Frontend & TypeScript, React, Vue.js, Modern JavaScript, Component Libraries, Web Accessibility, Performance Optimization\\[0.8em]
+Engineering & Test Strategy, Architecture Design, Code Quality, Cross-browser Testing, Git, Docker, AWS\\[0.8em]
+Leadership & Team Mentoring, Agile/Scrum, Technical Documentation, Process Optimization, Stakeholder Management\\[0.8em]
+Business & UI/UX Design, Information Architecture, Business Process Modeling (BPMN), Technical Writing, Concept Development, Presentations
+\end{tabularx}
+
+\end{document}
